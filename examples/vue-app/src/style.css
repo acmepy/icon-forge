@@ -1,0 +1,7 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #1f2937; }
+body { margin: 0; background: #f8fafc; }
+main { max-width: 42rem; margin: 5rem auto; padding: 2rem; background: white; border-radius: 1rem; box-shadow: 0 8px 30px #0f172a14; }
+h1 { display: flex; gap: .5rem; align-items: center; }
+button { margin-right: .75rem; border: 0; border-radius: .5rem; padding: .65rem .9rem; background: #2563eb; color: white; font: inherit; cursor: pointer; }
+button .icon\:mdi\:plus { margin-right: .35rem; }
+button.icon\:mdi\:delete { background: #dc2626; }
