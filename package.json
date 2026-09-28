@@ -1,0 +1,43 @@
+{
+  "name": "@acmepy/icon-forge",
+  "version": "1.0.0",
+  "description": "Build-time Iconify icon extraction for Vite and Vue.",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./src/core.js",
+    "./vite": "./src/vite.js",
+    "./vue": "./src/vue.js"
+  },
+  "bin": {
+    "icon-forge": "./bin/icon-forge.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/core.js && node --check src/vite.js && node --check bin/icon-forge.js"
+  },
+  "dependencies": {
+    "@iconify/utils": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0 || ^6.0.0 || ^7.0.0",
+    "vue": "^3.2.0"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  }
+}
