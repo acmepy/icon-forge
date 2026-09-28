@@ -43,7 +43,7 @@ Then use a literal Iconify name in any Vue SFC. The Vite plugin imports the Vue 
 </template>
 ```
 
-`Icon` renders a `span`, inherits `currentColor`, and is decorative by default (`aria-hidden="true"`). Passing `label` makes it an accessible image.
+`Icon` renders a `span`, inherits `currentColor`, and is decorative by default (`aria-hidden="true"`). Passing `label` makes it an accessible image. `size` accepts `xs`, `sm`, `md`, `lg` and `xl`; it also accepts a number (pixels) or a CSS dimension such as `"1.25em"` or `"24em"`.
 
 ### Vite configuration
 

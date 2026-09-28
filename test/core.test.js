@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { generateCss, scanText } from '../src/core.js';
 import { iconForge } from '../src/vite.js';
+import { resolveSize } from '../src/size.js';
 
 test('finds static Vue Icon component names', () => {
   const icons = scanText('<Icon name="mdi:plus" /><Icon name="ph:gear-six" />');
@@ -18,6 +19,14 @@ test('finds configured class references', () => {
 
 test('does not find dynamic icon names', () => {
   assert.equal(scanText('<Icon :name="currentIcon" />').size, 0);
+});
+
+test('normalizes named, numeric and CSS icon sizes', () => {
+  assert.equal(resolveSize('sm'), '1em');
+  assert.equal(resolveSize('lg'), '1.5em');
+  assert.equal(resolveSize(16), '16px');
+  assert.equal(resolveSize('24'), '24px');
+  assert.equal(resolveSize('24em'), '24em');
 });
 
 test('Vite plugin auto-imports the Vue component and stylesheet', () => {
