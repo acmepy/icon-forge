@@ -11,7 +11,7 @@ For Vite + Vue it also enables this without changing `main.js` or `app.js`:
 ## Install
 
 ```bash
-npm install -D @acmepy/icon-forge
+npm install -D icon-forge
 ```
 
 The default API mode needs no additional Iconify package. The optional local mode is documented below.
@@ -23,7 +23,7 @@ Add the plugin once, after the Vue plugin, in `vite.config.js`:
 ```js
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { iconForge } from '@acmepy/icon-forge/vite';
+import { iconForge } from 'icon-forge/vite';
 
 export default defineConfig({
   plugins: [vue(), iconForge()],
@@ -66,7 +66,7 @@ Use the CLI once to create a stylesheet, import it in your application, and impo
 ```js
 // src/main.js
 import { createApp } from 'vue';
-import { Icon } from '@acmepy/icon-forge/vue';
+import { Icon } from 'icon-forge/vue';
 import './icon-forge.css';
 import App from './App.vue';
 

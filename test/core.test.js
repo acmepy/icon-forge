@@ -23,7 +23,7 @@ test('does not find dynamic icon names', () => {
 test('Vite plugin auto-imports the Vue component and stylesheet', () => {
   const plugin = iconForge();
   const result = plugin.transform('<template><Icon name="mdi:plus" /></template>', 'App.vue');
-  assert.match(result.code, /import \{ Icon as IconForgeIcon \}/);
+  assert.match(result.code, /import \{ Icon as IconForgeIcon \} from 'icon-forge\/vue';/);
   assert.match(result.code, /<IconForgeIcon prefix="icon" name="mdi:plus"/);
   assert.match(result.code, /import 'virtual:icon-forge\.css';/);
 });

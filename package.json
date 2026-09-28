@@ -1,6 +1,6 @@
 {
-  "name": "@acmepy/icon-forge",
-  "version": "1.0.0",
+  "name": "icon-forge",
+  "version": "1.0.1",
   "description": "Build-time Iconify icon extraction for Vite and Vue.",
   "type": "module",
   "license": "MIT",

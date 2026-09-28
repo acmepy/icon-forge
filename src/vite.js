@@ -18,7 +18,7 @@ function injectVueComponent(code, component, prefix) {
     .replace(open, `<${local} prefix="${prefix}"$1`)
     .replace(close, `</${local}>`);
   const imports = [
-    `import { Icon as ${local} } from '@acmepy/icon-forge/vue';`,
+    `import { Icon as ${local} } from 'icon-forge/vue';`,
     `import '${PUBLIC_CSS_ID}';`,
   ].filter((line) => !transformed.includes(line)).join('\n');
   if (imports) {
