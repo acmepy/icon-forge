@@ -1,6 +1,6 @@
 {
   "name": "icon-forge",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build-time Iconify icon extraction for Vite and Vue.",
   "type": "module",
   "license": "MIT",
@@ -11,9 +11,18 @@
     "LICENSE"
   ],
   "exports": {
-    ".": "./src/core.js",
-    "./vite": "./src/vite.js",
-    "./vue": "./src/vue.js"
+    ".": {
+      "types": "./src/core.d.ts",
+      "default": "./src/core.js"
+    },
+    "./vite": {
+      "types": "./src/vite.d.ts",
+      "default": "./src/vite.js"
+    },
+    "./vue": {
+      "types": "./src/vue.d.ts",
+      "default": "./src/vue.js"
+    }
   },
   "bin": {
     "icon-forge": "./bin/icon-forge.js"
